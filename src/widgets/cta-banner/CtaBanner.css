@@ -1,0 +1,10 @@
+.cta { display: flex; align-items: center; justify-content: space-between; gap: 32px; flex-wrap: wrap; padding: 64px; background: var(--navy); color: #fff; }
+.cta h2 { color: #fff; font-size: clamp(1.7rem, 3vw, 2.3rem); margin-bottom: 8px; }
+.cta p { color: #b9c9db; max-width: 520px; }
+@media (max-width: 720px) { .cta { padding: 40px 28px; } }
+.cta { position: relative; overflow: hidden; }
+.cta > * { position: relative; z-index: 1; }
+.cta .cta__orb { position: absolute; z-index: 0; border-radius: 50%; border: 1px solid rgba(143,184,224,.35); }
+.cta__orb--1 { width: 420px; height: 420px; right: -80px; top: -160px; animation: spin 50s linear infinite; border-style: dashed !important; }
+.cta__orb--2 { width: 240px; height: 240px; right: 120px; bottom: -140px; background: radial-gradient(circle, rgba(90,167,232,.35), transparent 70%); border: 0 !important; animation: pulse 5s ease-in-out infinite; }
+@keyframes pulse { 50% { transform: scale(1.25); opacity: .6; } }

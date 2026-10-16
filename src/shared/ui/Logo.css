@@ -1,0 +1,7 @@
+.logo { display: flex; flex-direction: column; line-height: 1.1; color: var(--navy); }
+.logo__name { font: 600 1.45rem var(--font-head); letter-spacing: .01em; }
+.logo__name em { font-style: italic; font-weight: 400; color: var(--blue); }
+.logo__sub { margin-top: 4px; font: 500 .62rem var(--font); letter-spacing: .3em; text-transform: uppercase; color: var(--muted); }
+.logo--dark { color: #fff; }
+.logo--dark .logo__name em { color: #8fb8e0; }
+.logo--dark .logo__sub { color: #8ea2bd; }

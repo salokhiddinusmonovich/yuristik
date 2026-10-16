@@ -1,0 +1,25 @@
+.header { background: #fff; position: sticky; top: 0; z-index: 20; border-bottom: 1px solid var(--line); }
+.header__row { display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 18px 0; }
+.header__nav { display: flex; gap: 40px; }
+.header__nav a { color: var(--text); font: 500 .9rem var(--font); padding: 6px 0; border-bottom: 1px solid transparent; transition: .2s; }
+.header__nav a:hover { color: var(--blue); }
+.header__nav a.active { border-color: var(--navy); }
+.header__right { display: flex; align-items: center; gap: 16px; }
+.lang { display: flex; gap: 14px; }
+.lang button { background: none; border: 0; color: var(--muted); font: 500 .78rem var(--font); letter-spacing: .08em; cursor: pointer; padding: 2px 0; border-bottom: 1px solid transparent; }
+.lang button.is-active { color: var(--navy); border-color: var(--navy); }
+.header__burger { display: none; background: none; border: 0; color: var(--navy); cursor: pointer; }
+@media (max-width: 860px) {
+  .header__burger { display: block; }
+  .header__nav { display: none; position: absolute; top: 100%; left: 0; right: 0; flex-direction: column; gap: 0; background: #fff; padding: 0 24px 16px; border-bottom: 1px solid var(--line); }
+  .header__nav.is-open { display: flex; }
+  .header__nav a { padding: 14px 0; border-bottom: 1px solid var(--line); }
+}
+.header { transition: box-shadow .3s, background .3s; }
+.header__row { transition: padding .3s; }
+.header.is-scrolled { box-shadow: 0 6px 24px rgba(14,42,71,.08); background: rgba(255,255,255,.94); backdrop-filter: blur(8px); }
+.header.is-scrolled .header__row { padding: 10px 0; }
+.header__nav a { position: relative; border-bottom: 0; }
+.header__nav a::after { content: ''; position: absolute; left: 0; bottom: 0; height: 2px; width: 100%; background: var(--blue); transform: scaleX(0); transform-origin: right; transition: transform .35s cubic-bezier(.2,.7,.2,1); }
+.header__nav a:hover::after, .header__nav a.active::after { transform: scaleX(1); transform-origin: left; }
+@media (max-width: 860px) { .header__nav a::after { display: none; } }

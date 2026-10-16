@@ -1,0 +1,6 @@
+.marquee { background: var(--navy); color: #fff; overflow: hidden; padding: 20px 0; }
+.marquee__track { display: flex; gap: 40px; width: max-content; animation: marquee 40s linear infinite; }
+.marquee:hover .marquee__track { animation-play-state: paused; }
+.marquee span { font: 400 1.35rem var(--font-head); font-style: italic; white-space: nowrap; display: flex; gap: 40px; align-items: center; }
+.marquee i { font-style: normal; color: #5aa7e8; font-size: .8rem; }
+@keyframes marquee { to { transform: translateX(-50%); } }

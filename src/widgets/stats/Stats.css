@@ -1,0 +1,6 @@
+.stats { display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid rgba(255,255,255,.14); border-bottom: 1px solid rgba(255,255,255,.14); }
+.stats__item { padding: 48px 24px; border-left: 1px solid rgba(255,255,255,.14); }
+.stats__item:first-child { border-left: 0; padding-left: 0; }
+.stats__item strong { display: block; font: 500 clamp(2.6rem, 5vw, 4.4rem) var(--font-head); line-height: 1.05; font-variant-numeric: tabular-nums; background: linear-gradient(180deg, #fff, #8fb8e0); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+.stats__item span { color: #8ea2bd; font-size: .9rem; }
+@media (max-width: 720px) { .stats { grid-template-columns: repeat(2, 1fr); } .stats__item { padding: 28px 16px; } .stats__item:nth-child(3) { border-left: 0; padding-left: 0; } }

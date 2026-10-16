@@ -1,0 +1,18 @@
+.btn { display: inline-flex; align-items: center; gap: 12px; padding: 15px 28px; font: 500 .92rem var(--font); letter-spacing: .02em; cursor: pointer; border: 1px solid transparent; border-radius: 2px; transition: background .2s, color .2s, border-color .2s; }
+.btn--primary { background: var(--navy); color: #fff; }
+.btn--primary:hover { background: var(--blue); }
+.btn--outline { border-color: var(--navy); color: var(--navy); }
+.btn--outline:hover { background: var(--navy); color: #fff; }
+.btn--light { background: #fff; color: var(--navy); }
+.btn--light:hover { background: var(--blue-soft); }
+.btn { position: relative; overflow: hidden; isolation: isolate; }
+.btn::before { content: ''; position: absolute; inset: 0; z-index: -1; background: var(--blue); transform: translateX(-101%); transition: transform .4s cubic-bezier(.2,.7,.2,1); }
+.btn--primary { background: var(--navy); }
+.btn--primary::before { background: var(--blue); }
+.btn--outline::before { background: var(--navy); }
+.btn--outline:hover { background: transparent; }
+.btn--light::before { background: var(--blue-soft); }
+.btn--light:hover { background: #fff; }
+.btn:hover::before { transform: none; }
+.btn svg { transition: transform .3s; }
+.btn:hover svg { transform: translateX(5px); }

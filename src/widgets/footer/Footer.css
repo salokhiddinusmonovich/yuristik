@@ -1,0 +1,6 @@
+.footer { background: var(--navy-deep); color: #8ea2bd; padding: 72px 0 24px; font-size: .9rem; }
+.footer__row { display: flex; justify-content: space-between; gap: 32px; flex-wrap: wrap; padding-bottom: 40px; border-bottom: 1px solid rgba(255,255,255,.1); }
+.footer ul { list-style: none; padding: 0; display: grid; gap: 10px; }
+.footer li { display: flex; align-items: center; gap: 10px; }
+.footer li svg { color: #8fb8e0; }
+.footer__bottom { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; padding-top: 24px; font-size: .8rem; }
